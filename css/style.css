@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 a{
     text-decoration: none;
@@ -13,6 +14,7 @@ ul{
 }
 
 body{
+    background-color: #1A1A1A;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -34,9 +36,63 @@ h1,h2,h3,h4,h5,
 h6 {
 	font-weight:normal;
 }
+
+
+.title::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 32px;
+    font-size: 36px;
+    line-height: 250%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    color: #D9D9D9;
+}
+.title {
+    position: relative;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #303030;
+
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 43px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    padding: 25px 57px;
+    transition: all .3s;
+}
+.btn:hover{
+    opacity: .7;
+}
+.btn--green {
+    background: #34C759;
+    color: #1A1A1A;
+}
+.line--green{
+    background: #34C759;
+    height: 2px;
+    width: 60px;
+    transition: all 1s;
+    
+}
+.line--green:hover{
+    width: 40%;
+
+}
+
 /*
 * Header
-*/
 
 
 .header {
@@ -45,7 +101,6 @@ h6 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    position: relative;
 }
 
 .nav {
@@ -151,6 +206,117 @@ h6 {
 .header__card-text {
     font-size: 14px;
 }
+*/
+
+
+.header {
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    mix-blend-mode: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+.header__container {
+    display: flex;
+    min-height: 91px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+}
+.header__logo-img {
+}
+.header__menu {
+    display: flex;
+}
+.header__menu-item {
+    margin-right: 45px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 90px;
+    color: white;
+    transition: all .3s;
+}
+.header__menu-item:last-child{
+    margin-right: 0;
+}
+.header__menu-link {
+}
+.header__menu-link:hover{
+    color: #34C759;
+    opacity: .7;
+}
+
+
+
+.food {
+    z-index: 2;
+    min-height: 1080px;
+    background: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.food__container {
+    text-align: center;
+    padding-top: 171px;
+}
+
+.food__title {
+    font-size: 72px;
+    line-height: 84px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.food__title span{
+    font-weight: bold;
+}
+
+.food__text {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: -0.2px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    max-width: 590px;
+    margin-bottom: 40px;
+}
+.food__btn {
+    margin-bottom: 70px;
+}
+
+.food__cards {
+    display: flex;
+}
+.food__card {
+    flex: 1 1 33.3333%;
+}
+.food__card-icon {
+    margin-bottom: 13px;
+}
+.food__card-title {
+    color: #FFFFFF;
+}
+.food__card-text {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
 
 
 /*
@@ -159,46 +325,148 @@ h6 {
 
 
 .about {
-    background-color: #1A1A1A;
-    height: 400px;
+
+    
 }
 .about__container {
-    position: absolute;
-    bottom:  -100%;
-    left: 0%;
-    right: 0%;
+    margin-top: -240px;
+   
     
 }
 .about__main {
     padding-top: 90px;
     padding-bottom: 90px;
-    padding-left: 190px;
-    padding-right: 190px;
     text-align: center;
     background: #252525;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
 }
-.about__title {
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 60px;
 
-    letter-spacing: 0.2em;
+.about__title{
+    margin-bottom: 16px;
+}
 
-    color: #D9D9D9;
+
+.about__title::after {
+    content: 'The Basics Of Healthy Food';
+
 
 }
 .about__text {
+    margin: 0 auto;
+    max-width: 734px;
     color: #A6A6A6;
     margin-bottom: 90px;
 }
 .about__slider {
+    text-align: center;
+    position: relative;
+
 }
-.slider__images{
+.slider__main{
+    min-height: 231px;
+}
+
+.slider__slide{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 34px;
+    height: 230px;
+    
+    
 }
 .slider__img{
-    max-width: 350px;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.hidden{
+    display: none;
+}
+.slider__arrow-left{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.slider__arrow-right{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.slider__arrow-left:hover, .slider__arrow-right:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.slider__arrow-left:active, .slider__arrow-right:active{
+    opacity: .3;
+}
+
+
+
+/*
+* Work
+*/
+
+.work {
+}
+.work__container {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 30px;
+}
+
+.work__title {
+    margin-bottom: 30px;
+}
+.work__title::after{
+    content: 'how it works';
+}
+
+.work__line {
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.work__cards {
+    display: flex;
+    justify-content: space-between;
+}
+.work__card {
+    text-align: left;
+    max-width: 255px;
+    background: #252525;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 24px 24px 60px 24px;
+    transition: all .5s;
+}
+.work__card:hover{
+    background: #34C759;
+    cursor: pointer;
+}
+
+.work__card-title {
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.work__card:hover .work__card-title, .work__card:hover .work__card-text{
+    color: #191919;
+}
+.work__card:hover .work__card-line{
+    background: #191919;
+    width: 80%;
+}
+
+.work__card-line {
+    margin-bottom: 24px;
+}
+.work__card-text {
+    font-size: 13px;
 }
