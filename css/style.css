@@ -691,6 +691,8 @@ h6 {
         grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(3, 1fr);
     }
+    .about__slider{
+	    display: none;
 }
 
 
