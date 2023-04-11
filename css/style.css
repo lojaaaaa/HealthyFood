@@ -1,4 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+/*
+* Обнуление
+*/
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -18,8 +25,11 @@ body{
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 187%;
     color: #A6A6A6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container{
@@ -57,9 +67,7 @@ h6 {
     line-height: 150%;
     text-align: center;
     letter-spacing: 0.2em;
-    
     color: #303030;
-
 }
 
 .btn {
@@ -67,146 +75,42 @@ h6 {
     border-radius: 43px;
     font-weight: 700;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 122%;
     letter-spacing: 0.2em;
     padding: 25px 57px;
     transition: all .3s;
+    background: #262626;
+    color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #303030;
 }
 .btn:hover{
-    opacity: .7;
-}
-.btn--green {
     background: #34C759;
     color: #1A1A1A;
 }
+.btn--green {
+    background: #34C759;
+    border: 0;
+    color: #1A1A1A;
+}
+.btn--green:hover {
+    opacity: .7;
+}
+
 .line--green{
     background: #34C759;
     height: 2px;
     width: 60px;
     transition: all 1s;
-    
 }
-.line--green:hover{
-    width: 40%;
+.main{
+    flex: 1 1 auto;
+}
 
-}
 
 /*
 * Header
-
-
-.header {
-    min-height: 1080px;
-    background: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.nav {
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
-    mix-blend-mode: normal;
-}
-.nav__container {
-    min-height: 91px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav__logo {
-}
-.nav__logo-img {
-}
-.nav__menu {
-    display: flex;
-}
-.nav__menu-item {
-    margin-right: 45px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 90px;
-    color: #FFFFFF;
-    transition: all .3s;
-}
-.nav__menu-item:last-child {
-    margin-right: 0px;
-}
-.nav__menu-link:hover{
-    color: #34C759;
-}
-
-.header__content {
-}
-.container2 {
-    max-width: 775px;
-    margin: 0 auto;
-    padding: 0 15px;
-    
-}
-.header__container {
-    text-align: center;
-    padding-top: 80px;
-}
-
-.header__title {
-    font-size: 72px;
-    line-height: 84px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    text-transform: capitalize;
-    color: #FFFFFF;
-    margin-bottom: 16px;
-}
-.header__title>span{
-    font-weight: bold;
-}
-.header__text {
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 162%;
-    letter-spacing: -0.2px;
-    color: #FFFFFF;
-    mix-blend-mode: normal;
-    opacity: 0.7;
-    max-width: 590px;
-    margin-bottom: 40px;
-}
-.header__btn{
-    display: block;
-    text-align: center;
-    margin-bottom: 70px;
-}
-.btn {
-    display: inline-block;
-    border-radius: 43px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.2em;
-    padding: 25px 57px;
-}
-.btn--green {
-    background: #34C759;
-    color: #1A1A1A;
-}
-.header__cards {
-    display: flex;
-    justify-content: space-around;
-}
-.header__card{
- 
-}
-
-.header__card-icon {
-    margin-bottom: 13px;
-}
-.header__card-title {
-    color: #FFFFFF;
-}
-.header__card-text {
-    font-size: 14px;
-}
 */
+
 
 
 .header {
@@ -252,6 +156,13 @@ h6 {
 
 
 
+
+/*
+* Food
+*/
+
+
+
 .food {
     z-index: 2;
     min-height: 1080px;
@@ -267,7 +178,7 @@ h6 {
 
 .food__title {
     font-size: 72px;
-    line-height: 84px;
+    line-height: 116%;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: capitalize;
@@ -296,9 +207,15 @@ h6 {
 
 .food__cards {
     display: flex;
+    text-align: center;
 }
 .food__card {
     flex: 1 1 33.3333%;
+    transition: all .3s;
+}
+.food__card a:hover{
+    text-decoration: underline;
+    color: #34C759;
 }
 .food__card-icon {
     margin-bottom: 13px;
@@ -349,8 +266,6 @@ h6 {
 
 .about__title::after {
     content: 'The Basics Of Healthy Food';
-
-
 }
 .about__text {
     margin: 0 auto;
@@ -411,12 +326,13 @@ h6 {
 * Work
 */
 
+
+
 .work {
 }
 .work__container {
     text-align: center;
     padding-top: 90px;
-    padding-bottom: 30px;
 }
 
 .work__title {
@@ -433,6 +349,8 @@ h6 {
 .work__cards {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .work__card {
     text-align: left;
@@ -469,4 +387,411 @@ h6 {
 }
 .work__card-text {
     font-size: 13px;
+}
+
+
+
+/*
+* Dishes
+*/
+
+
+.dishes {
+    margin-bottom: 90px;
+}
+.dishes__container {
+    padding-top: 120px;
+}
+.container {
+}
+.dishes__title{
+    margin-bottom: 30px;
+}
+.dishes__line{
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.dishes__title::after {
+    content: 'Dish Of The Day';
+}
+.title {
+}
+.dishes__line {
+}
+.dishes__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    gap: 30px;
+}
+.dishes__card {
+    max-width: 100%;
+    background: #252525;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+.dishes__card:hover .dishes__card-title{
+    color: #34C759;
+    cursor: pointer;
+}
+.dishes__card-image {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    max-width: 350px;
+    max-height: 260px;
+}
+.dishes__card-img {
+    max-width: 100%;
+}
+.dishes__card-main {
+    padding: 30px;
+
+}
+.dishes__card-title {
+    font-size: 32px;
+    line-height: 30px;
+    color: #D9D9D9;
+    margin-bottom: 3px;
+}
+.dishes__card-desk {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.15px;
+    color: #A4A8B2;
+    margin-bottom: 20px;
+}
+.dishes__card-text {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1625px;
+    color: #85878C;
+    margin-bottom: 30px;
+}
+
+
+.dishes__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dishes__rating-stars {
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+}
+.dishes__rating-stars::before{
+    content: "★★★★★";
+    display: block;
+
+}
+.dishes__rating-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+.dishes__rating-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+}
+.dishes__rating-label {
+    flex: 0 0 20%;
+    height: 100%;
+    cursor: pointer;
+    color: #4D4D4D;
+}
+.dishes__rating-label::before{
+    content: "★";
+    display: block;
+    transition: color .3s ease 0;
+}
+
+.dishes__rating-item:checked,
+.dishes__rating-item:checked ~ .dishes__rating-label{
+    color: #F9AD3D;
+}
+
+
+.dishes__rating-label:hover,
+.dishes__rating-label:hover ~ .dishes__rating-label,
+.dishes__rating-label:checked ~ .dishes__rating-label:hover{
+    color: #F9AD3D;
+}
+
+
+.dishes__rating-value {
+}
+.dishes__card-btn {
+    font-size: 10px;
+
+    border-radius: 30px;
+    padding: 16px 32px;
+}
+.btn {
+    
+}
+
+
+
+/*
+* Chefs
+*/
+
+
+
+.chefs {
+    margin-bottom: 120px;
+}
+.chefs__container {
+}
+.container {
+}
+.chefs__title::after{
+    content: "This month's chefs";
+}
+.chefs__title {
+    margin-bottom: 30px;
+}
+.title {
+}
+.chefs__line {
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.line--green {
+}
+.chefs__people {
+    display: flex;
+
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.chefs__person {
+    flex: 1 1 350px;
+    
+}
+.chef__person-main {
+    display: flex;
+    margin-bottom: 24px;
+}
+.chef__person-avatar {
+    margin-right: 24px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+}
+.chefs__person-info {
+}
+.chefs__person-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.225px;
+    color: #FFFFFF;
+    transition: all .3s;
+}
+.chefs__person:hover .chefs__person-name{
+    color: #34C759;
+    text-decoration: underline;
+}
+.chefs__person-profession {
+    font-size: 12px;
+}
+.chef__person-photos {
+    font-size: 0;
+
+}
+.chef__person-photo {
+    max-width: 100%;
+    
+
+}
+.chef__person-img{
+    border-radius: 5px;
+    height: 65px;
+    object-fit: cover;
+}
+.chef__person-photo:not(:last-child) {
+    margin-right: 30px;
+    max-width: 65px;
+}
+.chef__person-photo:first-child {
+    max-width: 165px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Footer
+*/
+
+
+
+.footer{
+    background: #252525;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer__container{
+    text-align: center;
+}
+.footer__line{
+    height: 2px;
+    background: #303030;
+    width: 100vw;
+    margin-bottom: 30px;
+}
+.footer__main{
+    margin-bottom: 30px;
+}
+.footer__text{
+    font-size: 12px;
+    line-height: 60px;
+    color: #737373;
+}
+
+
+
+
+/*
+* Media
+*/
+
+
+
+@media(max-width: 1200px){
+    .dishes__cards {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+
+
+@media(max-width: 860px){
+    .work__cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .food__title{
+        font-size: 50px;
+    }
+    .food__text{
+        font-size: 13px;
+    }
+    .food__btn {
+        margin-bottom: 45px;
+    }
+    .food__card-text{
+        font-size: 12px;
+    }
+    .food__card-title{
+        font-size: 12px;
+    }
+    .title::after {
+        font-size: 24px;
+        line-height: 150%;
+    }
+    .title {
+        font-size: 70px;
+        line-height: 150%;
+    }
+    .dishes__cards {
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .chefs__people{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chefs__person {
+        flex: 1 1 200px;
+      }
+}
+
+
+@media(max-width: 630px){
+    .food__title{
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+    .food__card{
+        height: 100%;
+        flex: 1 1 50%;
+    }
+    .food__cards{
+        flex-wrap: wrap;
+
+    }
+    .food__container{
+        padding-top: 150px;
+    }
+    .btn--green{
+        font-size: 13px;
+        padding: 20px 35px;
+    }
+    .header__menu{
+        display: none;
+    }
+    .about__main {
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+      }
+    .chef__person-img:first-child {
+        max-width: 65px;
+    }
+    .chef__person-photos{
+        text-align: center;
+    }
+    .chef__person-photo:not(:last-child) {
+        margin-right: 10px;
+      }
+
+}
+
+@media(max-width: 460px){
+    .food__title{
+        font-size: 30px;
+    }
+    .title::after {
+        font-size: 12px;
+        line-height: 150%;
+    }
+    .title {
+        font-size: 56px;
+        line-height: 150%;
+    }
+
 }
