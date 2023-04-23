@@ -169,7 +169,7 @@ h6 {
     background: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center;
 }
 .food__container {
     text-align: center;
