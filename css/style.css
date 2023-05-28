@@ -169,7 +169,7 @@ h6 {
     background: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 .food__container {
     text-align: center;
@@ -432,17 +432,24 @@ h6 {
     transition: all .3s;
 }
 .dishes__card:hover .dishes__card-title{
-    color: #34C759;
     cursor: pointer;
+}
+.dishes__card:hover{
+    transform: scale(1.05);
 }
 .dishes__card-image {
     border-radius: 8px 8px 0 0;
-    overflow: hidden;
     max-width: 350px;
     max-height: 260px;
+    overflow: hidden; 
 }
 .dishes__card-img {
     max-width: 100%;
+    transition: 1s;
+    display: block; 
+}
+.dishes__card-img:hover{
+    transform: scale(1.2);
 }
 .dishes__card-main {
     padding: 30px;
@@ -587,10 +594,12 @@ h6 {
 .chef__person-avatar {
     margin-right: 24px;
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    width: 64px;
+    height: 64px;
     object-fit: cover;
+   
 }
+
 .chefs__person-info {
 }
 .chefs__person-name {
@@ -621,6 +630,10 @@ h6 {
     border-radius: 5px;
     height: 65px;
     object-fit: cover;
+    transition: .5s;
+}
+.chef__person-img:hover{
+    transform: scale(1.2);
 }
 .chef__person-photo:not(:last-child) {
     margin-right: 30px;
@@ -631,9 +644,191 @@ h6 {
 }
 
 
+/* 
+* Recipes
+*/
 
 
+.recipes {
+    color: #FFFFFF;
+    margin-bottom: 120px;
+}
+.recipes__container {
+}
+.container {
+}
+.recipes__title::after {
+    content: 'Recipes From Our Chefs';
+}
+.recipes__title {
+}
+.title {
+}
+.recipes__line {
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.line--green {
+}
+.recipes__content {
+    display: flex;
+    gap: 30px;
 
+}
+.recipes__main-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+    padding: 60px 90px;
+    background-image: url(../img/recipes/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    transition: .5s;
+}
+.recipes__main-card:hover{
+    transform: scale(1.05);
+}
+.recipes__card:hover{
+    transform: scale(1.05);
+}
+.recipes__subtitle {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 25px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+
+    background: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: normal;
+    padding: 10px 15px;
+
+    margin-bottom: 65px;
+}
+.recipes__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.recipes__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.recipes__autor {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+}
+.recipes__box {
+    display: flex;
+    column-gap: 25px;
+}
+.box {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 30px;
+    display: flex;
+    column-gap: 30px;
+}
+.box__view {
+    position: relative;
+    padding-left: 28px;
+}
+.box__view::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    width: 22px;
+    height: 16px;
+    background-image: url(../img/icons/ic_remove_red_eye.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.box__comments {
+    position: relative;
+    padding-left: 28px;
+}
+.box__comments::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/ic_question_answer.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.recipes__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.recipes__card {
+    
+    background: #252525;
+    background-image: url(../img/recipes/2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 30px;
+    transition: all .5s;
+}
+
+
+.recipes__card-text {
+    margin-bottom: 10px;
+}
+.recipes__card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recipes__card-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.recipes__card-subtitle {
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 25px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+
+    background: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: normal;
+    padding: 10px 15px;
+
+}
+.recipes__card-date {
+}
+
+.recipes__card:hover{
+    background: #34C759;
+}
+
+.recipes__card:hover .recipes__card-subtitle{
+    background: rgba(0, 0, 0, 1);
+}
+.recipes__card:hover .recipes__card-text, .recipes__card:hover .recipes__card-bottom {
+    color: #252525;
+}
+.recipes__card:hover .recipes__card-subtitle{
+    color: white;
+}
 
 
 
@@ -666,6 +861,7 @@ h6 {
 .footer__line{
     height: 2px;
     background: #303030;
+    width: 100vw;
     margin-bottom: 30px;
 }
 .footer__main{
@@ -691,11 +887,19 @@ h6 {
         grid-template-columns: repeat(2, 350px);
         grid-template-rows: repeat(3, 1fr);
     }
-    .about__slider{
-	    display: none;
+    .dishes__card:hover{
+        transform: scale(1);
+    }
 }
 
-
+@media(max-width: 1000px){
+    .recipes__content {
+        flex-direction: column;
+    }
+    .recipes__main-card{
+        max-width: 100%;
+    }
+}
 
 @media(max-width: 860px){
     .work__cards {
@@ -739,6 +943,9 @@ h6 {
     .chefs__person {
         flex: 1 1 200px;
       }
+    .about__slider{
+        display: none;
+    }
 }
 
 
@@ -794,5 +1001,14 @@ h6 {
         font-size: 56px;
         line-height: 150%;
     }
-
+    .recipes__card-date{
+        font-size: 12px;
+    }
+    .recipes__card-bottom{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .recipes__main-card{
+        padding: 20px 40px;
+    }
 }
