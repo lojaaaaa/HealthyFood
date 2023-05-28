@@ -56,7 +56,8 @@ function showNextSlide(direction){
     nextSlide.setAttribute('data-active', '')
 }
 
-
+localStorage.setItem('liza', '17');
+console.log(localStorage.getItem('liza'));
 
 const item = document.querySelector('#dishes__rating-item-5')
 
@@ -64,3 +65,28 @@ item.addEventListener('click', function(){
     console.log(item) 
     document.querySelector('#rating-value').innerHTML = item.value
 })
+
+
+const itemsOfDishes = document.querySelectorAll('.dishes__rating-stars')
+
+itemsOfDishes.forEach(function(itemOfDishes, indexOfDishes){
+    console.log()
+
+    const itemsRating = Array.from(itemOfDishes.firstElementChild.children)
+    itemsRating.forEach(function(itemRating, indexItemRating){
+        itemRating.addEventListener('click', () => {
+            if (itemRating.classList.contains('dishes__rating-item')){
+                itemOfDishes.nextElementSibling.innerHTML = itemRating.value
+               // console.log(itemRating.value)
+            }
+        })
+        //console.log(itemRating)
+    })
+   // console.log(itemsRating)
+
+    
+})
+
+
+
+
